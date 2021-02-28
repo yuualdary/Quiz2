@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <!-- <li>{{names[0] }}</li> -->
+         </ul>
+        <br>
+        <label for="">Add Name</label><br>
+        <input type="text" v-model="content">
+        <button @click="AddName">Add</button>
+        <br>
+
+        <ul>
+            <li v-for="(name, index) in names">
+                <button @click="RemoveName(index)">Delete</button>
+                {{name}}
+                <input type="text" v-model="newValue">
+                <button @click="EditName(index)">Edit</button>
+
+        </ul>
+
+
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+        <script src ="assets/js/app.js"></script>
+        <script src="assets/vendor/vue.js"></script>
+        
+   
+</body>
+</html>
